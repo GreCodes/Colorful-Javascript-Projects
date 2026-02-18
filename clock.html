@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clock</title>
+<style>
+    body{
+        background-color: #d9b3dc;
+    }
+
+    .Clock{
+        position: absolute;
+        color: rgb(72, 7, 72);
+        font-family: "Tourney", sans-serif;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 100px;
+        letter-spacing: 7px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+ footer {
+  background-color: rgba(132, 7, 128, 0.5);
+  text-align: center;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  overflow: hidden;
+   font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+footer .marquee {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%; /* start off-screen to the right */
+  animation: marquee 15s linear infinite;
+}
+
+
+
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+    <div id="DigitalClock" class="Clock"></div>
+    <script type="text/javascript">
+        function showTime() {
+         var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM"
+
+        if(h==0){
+            h=12;  // 12 hour format
+        }
+
+        if(h>12){
+            h=h-12;  //12 hour format
+            session = "PM";
+        }
+
+        // if(h<10){
+        //     h = "0" + h;  // add zero before single digit hour
+        // }
+        // if(m<10){
+        //     m = "0" + m;  // add zero before single digit minute
+        // }
+        // if(s<10){
+        //     s = "0" + s;  // add zero before single digit second
+        // }
+        // document.getElementById("DigitalClock").innerHTML = h + ":" + m + ":" 
+        // + s + " " + session;
+
+        h =(h<10) ? "0" + h : h;  // add zero before single digit hour
+        m =(m<10) ? "0" + m : m;  // add zero before single digit minute
+        s =(s<10) ? "0" + s : s;  // add zero before single digit second
+        document.getElementById("DigitalClock").innerHTML = h + ":" + m + ":" 
+        + s + " " + session;
+        
+        setTimeout(showTime, 1000);
+        }        
+        showTime();
+
+        // https://font.download/font/my-heart
+
+    </script>
+
+    <footer>
+   <div class="marquee">
+   Hola Mundo! Designed with ♥ by GreCodes in 🇩🇰 Denmark 🇩🇰 &nbsp;2026
+  </div>
+</footer>
+
+</body>
+</html>
