@@ -30,5 +30,4 @@ Starting from the original project structure, I made several visual and layout i
 - Base project inspired by a calculator assignment from **Great Learning**
 - UI design and customization by **GreCodes**
 
-## 🚀 Live Demo
-_Add your GitHub Pages link here_
+##  Screenshots
