@@ -31,3 +31,5 @@ Starting from the original project structure, I made several visual and layout i
 - UI design and customization by **GreCodes**
 
 ##  Screenshots
+![Sakura Calculator – Main UI](Calculator1.png)
+![Sakura Calculator – Main UI](Calculator2.png)
